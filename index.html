@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Freelance: Buat Akun Gmail</title>
+    <title>Event Ditutup: Buat Akun Gmail</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
@@ -36,7 +36,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
         .gradient-text {
-            background: linear-gradient(to right, #4F46E5, #3B82F6);
+            background: linear-gradient(to right, #EF4444, #F59E0B); /* Merah ke Orange untuk penanda tutup */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -66,24 +66,25 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-primary selection:text-white">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-red-500 selection:text-white">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-card transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <i class="fa-solid fa-envelope-open-text text-primary text-2xl"></i>
-                    <span class="font-bold text-xl tracking-tight text-dark">Gmail<span class="text-primary">Task</span></span>
+                    <i class="fa-solid fa-envelope-open-text text-gray-500 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-dark">Gmail<span class="text-gray-500">Task</span></span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#tutorial-home" class="text-gray-600 hover:text-primary font-medium transition">Tutorial</a>
-                    <a href="#hadiah" class="text-gray-600 hover:text-primary font-medium transition">Hadiah</a>
-                    <a href="#syarat" class="text-gray-600 hover:text-primary font-medium transition">Syarat & Ketentuan</a>
+                    <a href="#tutorial-home" class="text-gray-600 hover:text-red-500 font-medium transition">Tutorial</a>
+                    <a href="#hadiah" class="text-gray-600 hover:text-red-500 font-medium transition">Hadiah</a>
+                    <a href="#syarat" class="text-gray-600 hover:text-red-500 font-medium transition">Syarat & Ketentuan</a>
                 </div>
                 <div>
-                    <a href="#setor" class="bg-primary hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-medium transition shadow-lg shadow-indigo-200">
-                        Setor Sekarang
+                    <!-- Link menuju WA untuk save nomor -->
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin%2C%20save%20nomor%20saya%20ya%20buat%20info%20event%20selanjutnya" target="_blank" class="bg-[#25D366] hover:bg-[#1ebd5c] text-white px-5 py-2 rounded-full font-medium transition shadow-lg shadow-green-200 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> SV Nomor WA
                     </a>
                 </div>
             </div>
@@ -92,73 +93,82 @@
 
     <!-- Hero Section -->
     <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center text-center">
-        <div class="inline-block bg-indigo-50 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-indigo-100">
-            <i class="fa-solid fa-fire mr-1"></i> Event Sedang Berlangsung!
+        <!-- Status Badge (Ditutup) -->
+        <div class="inline-block bg-red-50 text-red-600 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-red-200 shadow-sm">
+            <i class="fa-solid fa-lock mr-2"></i> EVENT SEDANG DITUTUP SEMENTARA
         </div>
+        
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark tracking-tight mb-6 leading-tight">
-            Cari Cuan Sampingan? <br>
-            <span class="gradient-text">Buat Akun Gmail Aja!</span>
+            Mohon Maaf, Pendaftaran <br>
+            <span class="gradient-text">Akun Gmail Ditutup!</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-8">
-            Dapatkan bayaran untuk setiap akun Gmail fresh yang kamu buat. Semakin banyak akun yang kamu setorkan, semakin besar bonus yang menanti. Bikin santai dari HP, cair tiap hari!
-        </p>
+        
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm max-w-2xl mx-auto mb-8">
+            <p class="text-lg text-gray-600">
+                Terima kasih atas antusiasmenya! Saat ini kami sedang tidak menerima setoran akun baru. 
+                <br><br>
+                <strong>Nanti kalau open lagi bakal dikabarin di Status WhatsApp (SW).</strong> Jadi silakan <em>save (SV)</em> nomor Admin sekarang biar gak ketinggalan kloter selanjutnya!
+            </p>
+        </div>
+
         <div class="flex flex-col sm:flex-row gap-4 mb-4">
-            <a href="#setor" class="bg-primary hover:bg-indigo-700 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition shadow-xl shadow-indigo-200 flex items-center justify-center">
-                Mulai Kerjakan <i class="fa-solid fa-arrow-right ml-2"></i>
+            <!-- Tombol WA -->
+            <a href="https://wa.me/62895347838761?text=Halo%20Admin%2C%20save%20nomor%20saya%20ya%20buat%20info%20event%20selanjutnya" target="_blank" class="bg-[#25D366] hover:bg-[#1ebd5c] text-white px-8 py-3.5 rounded-full font-semibold text-lg transition shadow-xl shadow-green-200 flex items-center justify-center">
+                <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> Chat & SV Nomor Admin
             </a>
-            <a href="#syarat" class="bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold text-lg transition flex items-center justify-center">
-                Baca Syarat Dulu
+            <a href="#tutorial-home" class="bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold text-lg transition flex items-center justify-center">
+                Pelajari Tutorial Dulu
             </a>
         </div>
     </section>
 
-    <!-- Tutorial Video Section (Di Halaman Utama) -->
-    <section id="tutorial-home" class="py-8 bg-gray-50 pb-16">
+    <!-- Tutorial Video Section (Tetap ada buat persiapan) -->
+    <section id="tutorial-home" class="py-8 bg-gray-50 pb-16 opacity-90">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold text-dark mb-2">Tonton Tutorialnya Dulu Yuk!</h2>
-                <p class="text-gray-500 text-sm">Biar gak salah langkah dan akun kamu dihitung sah.</p>
+                <div class="inline-block bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-bold mb-3">PERSIAPAN</div>
+                <h2 class="text-2xl font-bold text-dark mb-2">Tonton Tutorialnya Sambil Menunggu Yuk!</h2>
+                <p class="text-gray-500 text-sm">Biar nanti pas event buka, kamu udah jago dan akunnya dihitung sah.</p>
             </div>
             
             <!-- Video Player -->
             <div class="video-wrapper border-4 border-white rounded-2xl relative group">
-                <!-- Memanggil file tutorial.mp4 -->
                 <video controls poster="https://via.placeholder.com/1280x720.png?text=Klik+Play+Untuk+Menonton+Tutorial" class="rounded-xl">
                     <source src="tutorial.mp4" type="video/mp4">
                     Maaf, browser kamu tidak mendukung pemutaran video ini.
                 </video>
             </div>
 
-            <!-- Langkah Singkat Teks (di bawah video) -->
+            <!-- Langkah Singkat Teks -->
             <div class="mt-8 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <h3 class="font-bold text-lg mb-4 border-b pb-2"><i class="fa-solid fa-list-ol text-primary mr-2"></i>Ringkasan Langkah:</h3>
-                <div class="grid sm:grid-cols-2 gap-4">
+                <h3 class="font-bold text-lg mb-4 border-b pb-2"><i class="fa-solid fa-list-ol text-gray-400 mr-2"></i>Ringkasan Langkah (Sebagai Catatan):</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-gray-500">
                     <div class="flex gap-3">
-                        <div class="w-8 h-8 rounded-full bg-indigo-50 text-primary font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
                         <div>
                             <p class="font-semibold text-sm">Buat Akun Pribadi</p>
-                            <p class="text-xs text-gray-500">Nama: Stok Mika</p>
+                            <p class="text-xs">Nama: Stok Mika</p>
                         </div>
                     </div>
                     <div class="flex gap-3">
-                        <div class="w-8 h-8 rounded-full bg-indigo-50 text-primary font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
                         <div>
                             <p class="font-semibold text-sm">Format Email</p>
-                            <p class="text-xs text-gray-500">Wajib: stokmika[angka]@gmail.com</p>
+                            <p class="text-xs">Wajib: stokmika[angka]@gmail.com</p>
                         </div>
                     </div>
                     <div class="flex gap-3">
-                        <div class="w-8 h-8 rounded-full bg-indigo-50 text-primary font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
                         <div>
                             <p class="font-semibold text-sm">Password</p>
-                            <p class="text-xs text-gray-500">Wajib: Mika12345</p>
+                            <p class="text-xs">Wajib: Mika12345</p>
                         </div>
                     </div>
                     <div class="flex gap-3">
-                        <div class="w-8 h-8 rounded-full bg-indigo-50 text-primary font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
                         <div>
                             <p class="font-semibold text-sm">Lewati No HP</p>
-                            <p class="text-xs text-gray-500">Klik "Lewati" (Skip) saat diminta nomor</p>
+                            <p class="text-xs">Klik "Lewati" (Skip) saat diminta nomor</p>
                         </div>
                     </div>
                 </div>
@@ -166,245 +176,96 @@
         </div>
     </section>
 
-    <!-- Reward / Event Section -->
-    <section id="hadiah" class="py-16 bg-white">
+    <!-- Reward / Event Section (Di-gray out sedikit agar menandakan tutup) -->
+    <section id="hadiah" class="py-16 bg-white opacity-80">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-dark mb-4">Daftar Harga & Bonus Event</h2>
-                <p class="text-gray-500">Berapapun Gmail yang bisa dibuat, kami bayar semua asal memenuhi syarat!</p>
+                <h2 class="text-3xl font-bold text-gray-500 mb-4">Daftar Harga & Bonus Event (Info)</h2>
+                <p class="text-gray-400">Ini adalah estimasi bayaran yang akan kamu dapatkan jika event dibuka kembali nanti.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 filter grayscale">
                 <!-- Base Price -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-lg transition relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Dasar</div>
-                    <div class="w-14 h-14 mx-auto bg-indigo-100 text-primary rounded-full flex items-center justify-center text-2xl mb-4">
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 text-center relative overflow-hidden">
+                    <div class="w-14 h-14 mx-auto bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-dark mb-1">1 Akun Gmail</h3>
-                    <p class="text-sm text-gray-500 mb-4">Dibayar per akun</p>
-                    <div class="text-2xl font-black text-primary">Rp 1.000</div>
-                    <p class="text-xs text-gray-400 mt-2">Bebas buat satuan</p>
+                    <h3 class="text-lg font-bold text-gray-600 mb-1">1 Akun Gmail</h3>
+                    <div class="text-2xl font-black text-gray-500">Rp 1.000</div>
                 </div>
 
                 <!-- Bonus 1 -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-lg transition relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Bonus 1</div>
-                    <div class="w-14 h-14 mx-auto bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-2xl mb-4">
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 text-center relative overflow-hidden">
+                    <div class="w-14 h-14 mx-auto bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-dark mb-1">Total 3 Akun</h3>
-                    <p class="text-sm text-gray-500 mb-4">Ekstra Dana</p>
-                    <div class="text-2xl font-black text-amber-600">+ Rp 1.000</div>
-                    <p class="text-xs text-gray-500 mt-2 font-medium">Total: Rp 4.000</p>
+                    <h3 class="text-lg font-bold text-gray-600 mb-1">Total 3 Akun</h3>
+                    <div class="text-2xl font-black text-gray-500">+ Rp 1.000</div>
                 </div>
 
                 <!-- Bonus 2 -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-lg transition relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Bonus 2</div>
-                    <div class="w-14 h-14 mx-auto bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-2xl mb-4">
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 text-center relative overflow-hidden">
+                    <div class="w-14 h-14 mx-auto bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-dark mb-1">Total 5 Akun</h3>
-                    <p class="text-sm text-gray-500 mb-4">Ekstra Dana</p>
-                    <div class="text-2xl font-black text-amber-600">+ Rp 2.000</div>
-                    <p class="text-xs text-gray-500 mt-2 font-medium">Total: Rp 8.000</p>
+                    <h3 class="text-lg font-bold text-gray-600 mb-1">Total 5 Akun</h3>
+                    <div class="text-2xl font-black text-gray-500">+ Rp 2.000</div>
                 </div>
 
                 <!-- Bonus 3 -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-lg transition relative overflow-hidden border-2 border-primary">
-                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Paling Cuan</div>
-                    <div class="w-14 h-14 mx-auto bg-indigo-100 text-primary rounded-full flex items-center justify-center text-2xl mb-4">
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 text-center relative overflow-hidden">
+                    <div class="w-14 h-14 mx-auto bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-solid fa-crown"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-dark mb-1">Total 10 Akun</h3>
-                    <p class="text-sm text-gray-500 mb-4">Ekstra Dana Max</p>
-                    <div class="text-2xl font-black text-primary">+ Rp 4.000</div>
-                    <p class="text-xs text-gray-600 mt-2 font-bold">Total: Rp 17.000</p>
+                    <h3 class="text-lg font-bold text-gray-600 mb-1">Total 10 Akun</h3>
+                    <div class="text-2xl font-black text-gray-500">+ Rp 4.000</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Syarat & Ketentuan -->
-    <section id="syarat" class="py-16 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-                <div class="flex items-center gap-4 mb-8 border-b pb-6">
-                    <div class="bg-red-100 p-3 rounded-lg text-red-500">
-                        <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-dark">Syarat & Ketentuan Wajib</h2>
-                        <p class="text-gray-500 text-sm">Baca dengan teliti agar akun dihitung sah dan dibayar.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="flex gap-4 items-start">
-                        <div class="mt-1 bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">1. Status Akun Wajib Fresh & Polosan</h4>
-                            <p class="text-gray-600 text-sm mt-1">Tidak boleh terkait nomor HP atau Email Pemulihan (Recovery) apapun. Jika saat dicek ada no HP, dianggap batal.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 items-start">
-                        <div class="mt-1 bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">2. Domain Resmi</h4>
-                            <p class="text-gray-600 text-sm mt-1">Wajib menggunakan akhiran <strong>@gmail.com</strong>.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 items-start">
-                        <div class="mt-1 bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">3. Format Username Spesifik</h4>
-                            <ul class="text-gray-600 text-sm mt-1 list-disc ml-5">
-                                <li>Harus diawali kata: <strong class="text-primary">stokmika</strong></li>
-                                <li>Diikuti angka bebas.</li>
-                                <li>Contoh Benar: <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-800 font-mono text-xs">stokmika817@gmail.com</span> atau <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-800 font-mono text-xs">stokmika99@gmail.com</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 items-start">
-                        <div class="mt-1 bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">4. Password Seragam</h4>
-                            <p class="text-gray-600 text-sm mt-1">Wajib sama semua: <strong class="bg-gray-100 px-2 py-0.5 rounded text-gray-800 font-mono text-xs">Mika12345</strong> (Huruf 'M' besar, sisanya kecil).</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 bg-red-50 rounded-xl p-5 border border-red-100">
-                    <h4 class="font-bold text-red-700 mb-2"><i class="fa-solid fa-circle-info mr-2"></i>Catatan Penting</h4>
-                    <ul class="text-sm text-red-600 space-y-2 list-disc ml-5">
-                        <li>Dilarang keras melampirkan no HP / email pemulihan. Akun akan dicek admin satu per satu.</li>
-                        <li>Jika akun terkunci atau minta verifikasi no HP saat admin login pertama kali, maka dianggap <strong>GAGAL</strong> (tidak dibayar).</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Setor Akun -->
-    <section id="setor" class="py-16 bg-white">
+    <!-- Form Setor Akun (DIGANTI MENJADI PEMBERITAHUAN TUTUP) -->
+    <section id="setor" class="py-16 bg-gray-100">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-50 rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary"></div>
+            <div class="bg-white rounded-3xl p-6 sm:p-12 shadow-sm border-2 border-dashed border-gray-300 relative overflow-hidden text-center">
                 
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl font-bold text-dark">Form Setor Akun Gmail</h2>
-                    <p class="text-gray-500 mt-2 text-sm">Input format sesuai contoh, lalu klik kirim. Anda akan otomatis diarahkan ke WhatsApp Admin.</p>
-                </div>
-
-                <!-- Custom Warning Message (Hidden by default) -->
-                <div id="warning-msg" class="hidden mb-4 bg-red-50 text-red-600 px-4 py-3 rounded-lg text-sm flex items-center border border-red-200">
-                    <i class="fa-solid fa-circle-exclamation mr-2"></i>
-                    <span id="warning-text">Kotak input tidak boleh kosong!</span>
-                </div>
-
-                <div class="mb-6">
-                    <label class="block text-gray-700 font-medium mb-2" for="accountList">Tempel Hasil Akun Anda di Sini:</label>
-                    <div class="bg-blue-50 p-3 rounded-t-lg border border-blue-100 border-b-0">
-                        <p class="text-xs text-blue-800 font-mono">
-                            <strong>Contoh Format:</strong><br>
-                            stokmika881@gmail.com | Mika12345<br>
-                            stokmika055@gmail.com | Mika12345
-                        </p>
+                <div class="flex justify-center mb-6">
+                    <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-lock text-5xl text-gray-400"></i>
                     </div>
-                    <textarea 
-                        id="accountList" 
-                        rows="6" 
-                        class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-b-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-mono text-sm resize-y"
-                        placeholder="stokmika123@gmail.com | Mika12345&#10;stokmika456@gmail.com | Mika12345"
-                    ></textarea>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-gray-700 mb-4">Form Setoran Ditutup</h2>
+                <p class="text-gray-500 mb-8 max-w-lg mx-auto">
+                    Mohon maaf, saat ini kami sudah tidak menerima input data akun Gmail baru karena kuota sedang penuh atau event sedang rehat.
+                </p>
+
+                <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-xl inline-block text-left mb-6">
+                    <h4 class="font-bold text-yellow-800 mb-1"><i class="fa-solid fa-bell mr-2"></i>Ingin Ikut Kloter Selanjutnya?</h4>
+                    <p class="text-sm text-yellow-700">Pastikan kamu sudah save nomor Admin. Info pembukaan event akan diumumkan khusus melalui Status WhatsApp (SW).</p>
                 </div>
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 font-medium mb-2" for="paymentMethod">Metode Pencairan Dana (Opsi):</label>
-                    <input 
-                        type="text" 
-                        id="paymentMethod" 
-                        class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm"
-                        placeholder="Contoh: DANA - 0812xxxxxx (A/N Budi)"
-                    >
-                </div>
-
-                <button 
-                    onclick="kirimKeWhatsApp()"
-                    class="w-full bg-[#25D366] hover:bg-[#1ebd5c] text-white font-bold py-4 px-6 rounded-xl transition flex justify-center items-center shadow-lg shadow-green-200"
-                >
-                    <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> Kirim ke WhatsApp Admin
-                </button>
-                <p class="text-center text-xs text-gray-400 mt-4"><i class="fa-solid fa-lock mr-1"></i> Data aman dan langsung diteruskan ke WA Anda sendiri.</p>
+                <br>
+                <!-- Tombol WA -->
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin%2C%20save%20nomor%20saya%20ya%20buat%20info%20event%20selanjutnya" target="_blank" class="inline-flex bg-[#25D366] hover:bg-[#1ebd5c] text-white font-bold py-4 px-8 rounded-full transition items-center shadow-lg shadow-green-200">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Chat Admin untuk SV Nomor
+                </a>
+                
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-gray-300 py-8 border-t border-gray-800">
+    <footer class="bg-dark text-gray-400 py-8 border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <div class="flex justify-center items-center gap-2 mb-4">
-                <i class="fa-solid fa-envelope-open-text text-primary text-xl"></i>
-                <span class="font-bold text-lg tracking-tight text-white">Gmail<span class="text-primary">Task</span></span>
+            <div class="flex justify-center items-center gap-2 mb-4 filter grayscale opacity-70">
+                <i class="fa-solid fa-envelope-open-text text-xl"></i>
+                <span class="font-bold text-lg tracking-tight">GmailTask (CLOSED)</span>
             </div>
             <p class="text-sm">© 2026 Event Freelance Gmail. All rights reserved.</p>
-            <p class="text-xs mt-2 text-gray-500">Website khusus submission event.</p>
         </div>
     </footer>
 
-    <!-- JavaScript Logic -->
-    <script>
-        function kirimKeWhatsApp() {
-            // 1. Ambil data dari form
-            const accounts = document.getElementById('accountList').value.trim();
-            const payment = document.getElementById('paymentMethod').value.trim();
-            const warningBox = document.getElementById('warning-msg');
-            const warningText = document.getElementById('warning-text');
-
-            // 2. Validasi input
-            if (!accounts) {
-                warningText.innerText = "Silakan isi minimal 1 akun Gmail terlebih dahulu!";
-                warningBox.classList.remove('hidden');
-                document.getElementById('accountList').focus();
-                
-                // Hide warning after 3 seconds
-                setTimeout(() => {
-                    warningBox.classList.add('hidden');
-                }, 3000);
-                return;
-            }
-
-            // Hitung perkiraan jumlah baris (jumlah akun) untuk info
-            const count = accounts.split('\n').filter(line => line.trim() !== '').length;
-
-            // 3. SET NOMOR WHATSAPP ADMIN DI SINI
-            // Ganti nomor di bawah dengan nomor kamu (Gunakan format 62 tanpa + dan tanpa angka 0 di depan)
-            // Contoh jika nomor 08123456789 -> 628123456789
-            const adminWhatsAppNumber = "62895347838761"; 
-
-            // 4. Susun pesan yang akan dikirim
-            let message = `Halo Admin, saya ingin setor tugas pembuatan Gmail.\n\n`;
-            message += `*Total Setoran:* ${count} Akun\n`;
-            message += `*Daftar Akun:*\n${accounts}\n\n`;
-            
-            if(payment) {
-                message += `*Tujuan Pencairan (Dana):*\n${payment}\n\n`;
-            }
-
-            message += `Mohon dicek ya min, pastikan sudah memenuhi syarat Polosan & Sandi Mika12345. Terima kasih!`;
-
-            // 5. Encode URL dan Buka tab WhatsApp
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/${adminWhatsAppNumber}?text=${encodedMessage}`;
-            
-            // Buka di tab baru
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
 </body>
 </html>
 
